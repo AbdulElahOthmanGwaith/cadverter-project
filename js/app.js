@@ -930,6 +930,14 @@
                 const file = AppState.files[i];
                 progressStatus.textContent = t('processing') + file.file.name;
                 
+                // Read file content
+                const content = await new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.onerror = (e) => reject(new Error('Failed to read file'));
+                    reader.readAsText(file.file);
+                });
+
                 // Simulate progress
                 for (let p = 0; p <= 100; p += 5) {
                     Elements.progressFill.style.width = p + '%';
@@ -937,7 +945,7 @@
                     await new Promise(r => setTimeout(r, 30));
                 }
 
-                const pdfBlob = await PDFGenerator.createPDF(file);
+                const pdfBlob = await PDFGenerator.createPDF({ ...file, content });
                 AppState.convertedFiles.push({
                     name: file.file.name.replace(/\.(dwg|dxf)$/i, '.pdf'),
                     blob: pdfBlob

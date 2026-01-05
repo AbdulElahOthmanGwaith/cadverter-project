@@ -630,9 +630,9 @@ const DXFParser = (function() {
         return [
             { type: 'rect', x: 50, y: 50, w: 400, h: 200, color: [255, 255, 255], fill: false },
             { type: 'rect', x: 60, y: 60, w: 380, h: 180, color: [0, 255, 255], fill: false },
-            { type: 'line', x1: 50, y1: 80, x2: 0, y2: 80, color: [255, 0, 0] },
-            { type: 'line', x1: 50, y1: 120, x2: 0, y2: 120, color: [255, 0, 0] },
-            { type: 'line', x1: 50, y1: 160, x2: 0, y2: 160, color: [255, 0, 0] },
+            { type: 'line', x1: 50, y1: 80, x2: 10, y2: 80, color: [255, 0, 0] },
+            { type: 'line', x1: 50, y1: 120, x2: 10, y2: 120, color: [255, 0, 0] },
+            { type: 'line', x1: 50, y1: 160, x2: 10, y2: 160, color: [255, 0, 0] },
             { type: 'line', x1: 450, y1: 80, x2: 500, y2: 80, color: [0, 0, 255] },
             { type: 'line', x1: 450, y1: 120, x2: 500, y2: 120, color: [0, 0, 255] },
             { type: 'line', x1: 450, y1: 160, x2: 500, y2: 160, color: [0, 0, 255] },

@@ -60,8 +60,8 @@ const PDFGenerator = (function() {
 
         // Generate drawing data
         let drawingData;
-        if (fileItem.extension === 'dxf') {
-            drawingData = DXFParser.generatePlaceholderData(fileItem.file.name);
+        if (fileItem.content) {
+            drawingData = DXFParser.parse(fileItem.content);
         } else {
             drawingData = DXFParser.generatePlaceholderData(fileItem.file.name);
         }
