@@ -1,0 +1,55 @@
+# robots.txt for CADverter
+# ملف robots.txt لمحرك البحث
+
+User-agent: *
+Allow: /
+
+# Allow crawling of all pages
+Sitemap: https://cadverter.space/sitemap.xml
+
+# Disallow sensitive directories (if any)
+Disallow: /private/
+Disallow: /api/
+
+# Crawl-delay (optional)
+Crawl-delay: 10
+
+# Host specification
+Host: https://cadverter.space
+
+# Additional resources for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Mobile-friendly check
+User-agent: MobileBot
+Allow: /
+
+# Image search
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Video search
+User-agent: Googlebot-Video
+Allow: /videos/
+
+# News search (if applicable)
+User-agent: Googlebot-News
+Allow: /
+
+# AdsBot (Google ads)
+User-agent: AdsBot-Google
+Allow: /
+
+# Mediapartners (Google ads)
+User-agent: Mediapartners-Google
+Allow: /

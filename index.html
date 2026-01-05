@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CADverter - Convert CAD files to PDF easily and quickly. Supports DWG and DXF with automatic preview and scaling of engineering drawings">
+    <meta name="keywords" content="CAD converter, DWG to PDF, DXF to PDF, convert CAD files, engineering converter, CADverter, PDF maker, convert drawings, CAD file, engineering design">
+    <meta name="author" content="CADverter">
+    <meta name="robots" content="index, follow">
+    <meta name="canonical" content="https://cadverter.space/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cadverter.space/">
+    <meta property="og:title" content="CADverter - DWG/DXF to PDF Converter">
+    <meta property="og:description" content="Convert CAD files to PDF easily and quickly. Secure converter supporting DWG and DXF with automatic preview and scaling">
+    <meta property="og:image" content="https://cadverter.space/images/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CADverter - DWG/DXF to PDF Converter">
+    <meta name="twitter:description" content="Convert CAD files to PDF easily and quickly. Supports DWG and DXF">
+    <meta name="twitter:image" content="https://cadverter.space/images/og-image.jpg">
+    
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CADverter",
+        "description": "CAD file to PDF converter supporting DWG and DXF with automatic preview and scaling",
+        "url": "https://cadverter.space",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+            "Convert DWG to PDF",
+            "Convert DXF to PDF",
+            "Instant drawing preview",
+            "Automatic scaling",
+            "Arabic language support",
+            "Browser-based processing"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "CADverter",
+            "url": "https://cadverter.space"
+        }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://cadverter.space/"
+        }]
+    }
+    </script>
+
+    <title>CADverter - DWG/DXF to PDF Converter | Fast and Secure</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M12 2L2 7L12 12L22 7L12 2Z' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M2 17L12 22L22 17' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M2 12L12 17L22 12' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CADverter">
+    
+    <!-- Critical CSS inline for performance -->
+    <style>
+        body { margin: 0; font-family: 'Inter', sans-serif; }
+        .initial-loader { position: fixed; inset: 0; background: #f8fafc; display: flex; align-items: center; justify-content: center; }
+    </style>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link" data-i18n="skipLink">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="CADverter Home">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span data-i18n="appName">CADverter</span>
+            </a>
+            <nav class="header-actions" aria-label="Main Navigation">
+                <button class="nav-link" onclick="window.CADverter.showHistory()" aria-label="View conversion history" data-i18n="history">Conversion History</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1 data-i18n="tagline">Convert <span class="highlight">CAD</span> files to PDF easily</h1>
+                <p data-i18n="subtitle">Fast and secure converter supporting DWG and DXF with automatic preview and scaling of engineering drawings</p>
+            </div>
+
+            <!-- Info Banner -->
+            <div class="info-banner" role="alert">
+                <div class="info-banner-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 2V22M12 8H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="info-banner-content">
+                    <h4 data-i18n="infoTitle">Now supports DXF files only</h4>
+                    <p data-i18n="infoText">We are currently developing the engine to support native DWG files. For DWG drawings, please export to DXF first or <strong>try the preview demo</strong></p>
+                </div>
+            </div>
+
+            <!-- Main Card -->
+            <div class="card">
+                <!-- File Upload Zone -->
+                <div class="upload-zone" id="uploadZone" role="button" tabindex="0" aria-label="Upload files, click or drag files here">
+                    <div class="upload-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M21 15V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V15M17 8L12 3M12 3L7 8M12 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="dragDrop">Drag CAD files here</h3>
+                    <p data-i18n="clickToSelect">Or click to select files from your device</p>
+                    <div class="file-types" data-i18n="supportedFormats">Supported files: DWG, DXF</div>
+                    <div class="supported-formats">
+                        <span class="format-badge" data-i18n="formatDWG">DWG</span>
+                        <span class="format-badge" data-i18n="formatDXF">DXF</span>
+                        <span class="format-badge premium" data-i18n="premium">PDF Converter</span>
+                    </div>
+                    <input type="file" id="fileInput" multiple accept=".dwg,.dxf" style="display: none;" aria-hidden="true">
+                </div>
+
+                <!-- Files List -->
+                <div class="files-list" id="filesList" style="display: none;">
+                    <div class="files-header">
+                        <h4 data-i18n="selectedFiles">Selected Files <span class="files-count" id="filesCount">0</span></h4>
+                        <button class="clear-all-btn" onclick="window.CADverter.clearAll()" aria-label="Remove all files" data-i18n="removeAll">Remove All</button>
+                    </div>
+                    <div id="filesItems"></div>
+                </div>
+
+                <!-- Settings -->
+                <div class="settings" id="settings" style="display: none;">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.4 15A1.65 1.65 0 0 0 19 13C19 11.3431 17.6569 10 16 10C14.3431 10 13 11.3431 13 13C13 13.7403 13.2522 14.4119 13.6494 14.9506L10.9977 19.7077C10.4516 20.5524 9.2877 20.6802 8.56269 20.0006L7.28466 18.8347C6.52837 18.1482 5.41759 18.3179 4.8919 19.2007L3.22654 22.1574C2.67671 23.0773 3.40456 24.1999 4.44306 23.9968L7.19637 23.5119C8.06862 23.3432 8.84067 22.6854 9.23635 21.8517L11.9997 16.9999L14.763 21.8517C15.1587 22.6854 15.9307 23.3432 16.8029 23.5119L19.5563 23.9968C20.5948 24.1999 21.3226 23.0773 20.7728 22.1574L19.1074 19.2007C18.5817 18.3179 17.4709 18.1482 16.7146 18.8347L15.4366 20.0006C14.7116 20.6802 13.5477 20.5524 13.0016 19.7077L10.35 14.9506C10.7472 14.4119 11 13.7403 11 13C11 11.3431 9.65685 10 8 10C6.34315 10 5 11.3431 5 13C5 13.7403 5.25222 14.4119 5.64942 14.9506L2.9977 19.7077C2.45157 20.5524 1.2877 20.6802 0.562691 20.0006L-0.71534 18.8347C-1.47163 18.1482 -2.58241 18.3179 -3.1081 19.2007L-4.77346 22.1574C-5.32329 23.0773 -4.59544 24.1999 -3.55694 23.9968L-0.803628 23.5119C0.0686195 23.3432 0.840674 22.6854 1.23635 21.8517L4 16.9999L6.76365 21.8517C7.15933 22.6854 7.93138 23.3432 8.80363 23.5119L11.557 23.9968C12.5955 24.1999 13.3233 23.0773 12.7735 22.1574L11.1081 19.2007C10.5824 18.3179 9.47163 18.1482 8.71534 18.8347L7.43731 20.0006C6.7123 20.6802 5.54843 20.5524 5.0023 19.7077L2.35 14.9506" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="settingsTitle">Conversion Settings</span>
+                    </h3>
+                    <div class="settings-grid">
+                        <div class="setting-item">
+                            <label for="paperSize" data-i18n="paperSize">Paper Size</label>
+                            <select id="paperSize">
+                                <option value="a4" data-i18n="a4">A4 (210 × 297 mm)</option>
+                                <option value="a3" data-i18n="a3">A3 (297 × 420 mm)</option>
+                                <option value="a2" data-i18n="a2">A2 (420 × 594 mm)</option>
+                                <option value="a1" data-i18n="a1">A1 (594 × 841 mm)</option>
+                                <option value="letter" data-i18n="letter">Letter (8.5 × 11 in)</option>
+                                <option value="legal" data-i18n="legal">Legal (8.5 × 14 in)</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="orientation" data-i18n="orientation">Orientation</label>
+                            <select id="orientation">
+                                <option value="portrait" data-i18n="portrait">Portrait</option>
+                                <option value="landscape" data-i18n="landscape">Landscape</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="scale" data-i18n="scale">Scale</label>
+                            <select id="scale" onchange="updateScaleInfo()">
+                                <option value="auto" data-i18n="autoScale">Auto (Fill Page)</option>
+                                <option value="1" data-i18n="scale100">100% (Original Size)</option>
+                                <option value="0.75" data-i18n="scale75">75%</option>
+                                <option value="0.5" data-i18n="scale50">50%</option>
+                                <option value="0.25" data-i18n="scale25">25%</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="quality" data-i18n="quality">PDF Quality</label>
+                            <select id="quality">
+                                <option value="high" data-i18n="high">High</option>
+                                <option value="medium" data-i18n="medium">Medium</option>
+                                <option value="low" data-i18n="low">Low</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="colorMode" data-i18n="colorMode">Color Mode</label>
+                            <select id="colorMode">
+                                <option value="color" data-i18n="color">Color</option>
+                                <option value="grayscale" data-i18n="grayscale">Grayscale</option>
+                                <option value="black" data-i18n="blackOnly">Black Only</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="scale-info" id="scaleInfo">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 2V22M12 8H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="scaleInfo">Auto scale: Will zoom the drawing to fit the selected page exactly while maintaining proportions</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons" id="actionButtons" style="display: none;">
+                    <button class="btn btn-secondary" id="previewBtn" onclick="window.CADverter.openPreview()" aria-label="Preview drawings">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="previewBtn">Preview</span>
+                    </button>
+                    <button class="btn btn-primary" id="convertBtn" onclick="window.CADverter.convertSingle()" aria-label="Convert to PDF">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 18V12M12 12H16M12 12V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="convertBtn">Convert to PDF</span>
+                    </button>
+                    <button class="btn btn-success" id="batchBtn" onclick="window.CADverter.convertBatch()" style="display: none;" aria-label="Convert all to PDF">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M22 19C22 20.6569 20.6569 22 19 22C17.3431 22 16 20.6569 16 19C16 17.3431 17.3431 16 19 16C20.6569 16 22 17.3431 22 19Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 19C2 20.6569 3.34315 22 4.68629 22C6.02944 22 7.37258 20.6569 7.37258 19C7.37258 17.3431 6.02944 16 4.68629 16C3.34315 16 2 17.3431 2 19Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 2V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7 6L12 2L17 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="batchConvert">Convert All</span>
+                    </button>
+                </div>
+
+                <!-- Progress -->
+                <div class="progress" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-header">
+                        <span class="progress-text" id="progressText" data-i18n="converting">Converting...</span>
+                        <span class="progress-percent" id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-status" id="progressStatus" data-i18n="processing">Processing...</div>
+                    <div class="batch-info" id="batchInfo" style="display: none;"></div>
+                </div>
+
+                <!-- Error Message -->
+                <div class="error-msg" id="errorMsg" role="alert"></div>
+
+                <!-- Result -->
+                <div class="result" id="result">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M22 11.08V12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 11.08Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 id="resultTitle" data-i18n="success">Conversion successful!</h3>
+                    <p id="resultMsg" data-i18n="downloadMsg">You can download the file or all files as a ZIP archive</p>
+                    <div class="result-actions">
+                        <button class="result-btn download" id="downloadBtn" onclick="window.CADverter.downloadPDF()" aria-label="Download PDF">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M21 15V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V15M17 8L12 3M12 3L7 8M12 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-i18n="download">Download</span>
+                        </button>
+                        <button class="result-btn zip" id="zipBtn" onclick="window.CADverter.downloadZip()" style="display: none;" aria-label="Download as ZIP">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M22 19C22 20.6569 20.6569 22 19 22C17.3431 22 16 20.6569 16 19C16 17.3431 17.3431 16 19 16C20.6569 16 22 17.3431 22 19Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M2 19C2 20.6569 3.34315 22 4.68629 22C6.02944 22 7.37258 20.6569 7.37258 19C7.37258 17.3431 6.02944 16 4.68629 16C3.34315 16 2 17.3431 2 19Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 2V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M7 6L12 2L17 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-i18n="downloadZip">Download ZIP</span>
+                        </button>
+                    </div>
+                    <button class="new-file-btn" onclick="window.CADverter.resetAll()" data-i18n="newFiles">Convert More Files</button>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="fastSpeed">Lightning Fast</h4>
+                    <p data-i18n="fastSpeedDesc">Instant conversion in the browser without uploading files to the server. Supports large files efficiently</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="security">Secure & Private</h4>
+                    <p data-i18n="securityDesc">All operations happen locally in your browser. Your files are never uploaded to any server. 100% privacy</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="previewFeature">Instant Preview</h4>
+                    <p data-i18n="previewFeatureDesc">View your drawings before conversion with zoom, pan, and resize capabilities</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 12H22" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 2C15.866 2 19 5.13401 19 9C19 12.866 15.866 16 12 16C8.13401 16 5 12.866 5 9C5 5.13401 8.13401 2 12 2Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="arabicSupport">Full Arabic Support</h4>
+                    <p data-i18n="arabicSupportDesc">Complete Arabic interface with support for Arabic text in drawings</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Preview Modal -->
+    <div class="modal-overlay" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span data-i18n="previewTitle">Drawing Preview</span>
+                    <span id="previewFileName"></span>
+                </h3>
+                <button class="modal-close" onclick="window.CADverter.closePreview()" aria-label="Close preview">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="canvas-container" id="canvasContainer">
+                    <div class="loading-spinner" id="previewLoading" style="display: flex;">
+                        <div class="spinner"></div>
+                        <p class="loading-text" data-i18n="loadingPreview">Loading preview...</p>
+                    </div>
+                    <canvas id="previewCanvas" style="display: none;"></canvas>
+                </div>
+            </div>
+            <div class="modal-toolbar">
+                <div class="zoom-controls">
+                    <button class="toolbar-btn" onclick="window.CADverter.zoomOut()" aria-label="Zoom out">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <span class="zoom-level" id="zoomLevel">100%</span>
+                    <button class="toolbar-btn" onclick="window.CADverter.zoomIn()" aria-label="Zoom in">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="toolbar-btn" onclick="window.CADverter.resetZoom()" aria-label="Reset zoom">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M21 21L15 15M15 15V9M15 15H21M3 3V9H9M3 3L9 9M3 3L9 9M3 3L9 9M3 3L9 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-info">
+                    <div class="modal-info-item" data-i18n-title="dimensions" title="Dimensions">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 15H9M15 15H21M3 9H9M9 9V3M15 9V3M15 21V15M21 15H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span id="previewDimensions">-</span>
+                    </div>
+                    <div class="modal-info-item" data-i18n-title="entities" title="Entities">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7 7H10M7 11H10M7 15H10M14 7H17M14 11H17M14 15H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span id="previewEntities">-</span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn secondary" onclick="window.CADverter.closePreview()" aria-label="Close" data-i18n="close">Close</button>
+                    <button class="modal-btn primary" onclick="window.CADverter.convertFromPreview()" aria-label="Convert to PDF" data-i18n="convertToPdf">Convert to PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div class="history-modal" id="historyModal" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+        <div class="history-content">
+            <div class="history-header">
+                <h3 id="historyTitle" data-i18n="historyTitle">Conversion History</h3>
+                <button class="close-btn" onclick="window.CADverter.closeHistory()" aria-label="Close history">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="history-list" id="historyList">
+                <!-- History items will be rendered here -->
+            </div>
+            <button class="clear-history-btn" onclick="window.CADverter.clearHistory()" aria-label="Clear history" data-i18n="clearHistory">Clear History</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>CADverter - <span data-i18n="footerText">CAD file to PDF converter</span></p>
+        <div class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span data-i18n="privacyNote">All operations are local. Your files are 100% secure</span>
+        </div>
+    </footer>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/dxf-parser.js"></script>
+    <script src="js/pdf-generator.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- Performance monitoring (optional) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Service worker could be registered here for PWA support
+                console.log('PWA support available');
+            });
+        }
+    </script>
+</body>
+</html>
