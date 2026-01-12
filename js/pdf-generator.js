@@ -362,8 +362,19 @@ const PDFGenerator = (function() {
         const fontSize = Math.max(4, entity.size * scale * 0.5 * dpiScale);
         
         pdf.setFontSize(fontSize);
-        pdf.setFont('helvetica', 'normal');
-        pdf.text(entity.text, x, y);
+        
+        // Check if text contains Arabic characters
+        const isArabic = /[\u0600-\u06FF]/.test(entity.text);
+        if (isArabic) {
+            // Basic Arabic support: reverse text for simple display if no complex shaper is available
+            // Note: For full support, a custom font and shaper like opentype.js would be needed
+            const reversedText = entity.text.split('').reverse().join('');
+            pdf.setFont('courier', 'normal'); // Courier sometimes handles unicode better in basic jspdf
+            pdf.text(reversedText, x, y, { align: 'right' });
+        } else {
+            pdf.setFont('helvetica', 'normal');
+            pdf.text(entity.text, x, y);
+        }
     }
 
     /**

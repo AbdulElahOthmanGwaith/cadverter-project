@@ -38,7 +38,7 @@
 
 ## كيفية الاستخدام
 
-1. افتح الموقع: [cadverter.io](https://cadverter.io)
+1. افتح الموقع: [abdulelahothmangwaith.github.io/cadverter-project](https://abdulelahothmangwaith.github.io/cadverter-project)
 2. اسحب ملفات CAD (DWG/DXF) أو انقر للتصفح
 3. اختر إعدادات التحويل (حجم الورق، الاتجاه، المقياس)
 4. انقر على "تحويل إلى PDF"
@@ -92,8 +92,8 @@
 
 ## الاتصال
 
-- 📧 البريد الإلكتروني: support@cadverter.io
-- 🌐 الموقع: https://cadverter.io
+- 📧 البريد الإلكتروني: support@abdulelahothmangwaith.github.io/cadverter-project
+- 🌐 الموقع: https://abdulelahothmangwaith.github.io/cadverter-project
 - 💼 LinkedIn: [CADverter](https://linkedin.com/company/cadverter)
 
 ---

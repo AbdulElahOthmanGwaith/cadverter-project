@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Allow crawling of all pages
-Sitemap: https://cadverter.space/sitemap.xml
+Sitemap: https://abdulelahothmangwaith.github.io/cadverter-project/sitemap.xml
 
 # Disallow sensitive directories (if any)
 Disallow: /private/
